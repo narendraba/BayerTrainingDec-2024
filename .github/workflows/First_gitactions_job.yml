@@ -1,0 +1,27 @@
+name: First Gitaction jobs 
+on: 
+  push:
+jobs:
+  echo-hello:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say hello
+        run: echo "Hello, World!"
+  echo-goodbye:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Failed step
+      run: |
+        echo "I this the example for failed case"
+        exit 1      
+    - name: Say goodbye
+      run: echo "Goodbye!"
+  echo-goodbye-solved:
+    runs-on: ubuntu-latest
+    steps: 
+    - name: Issued_fixed
+      run: |
+        echo "goodbye issue is fixed"
+        exit 0
+    - name: Say goodbye
+      run: echo "Goodbye!"
